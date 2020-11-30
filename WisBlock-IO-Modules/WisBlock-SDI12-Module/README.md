@@ -46,13 +46,14 @@ The port pins used are:
 
 The module 3V3 power is from the WisBlock switched power, `3V3_S`, to power off the module for low power comsumption. Also, the used DC/DC converter has extremely low quiescent current consumption and can be shutdown by the WisBlock pin (`IO5`) - same pin used in the RAK1920 IO module for shutdown the 5V DC/DC conveter.
 
-The used DC/DC convert has three operation modes:
+The used DC/DC converter has three operation modes:
 | Operation Mode | Habilitation | Quiescent Current Consumption |
 | :--: | :--: | :--: |
 | Regulation | EN=1 or `IO5`=1 | 1300 nA |
 | Forced Bypass | I2C selected | 120nA  |
 | Shutdown | EN=0 or `IO5`=0 | 8 nA |
  
+The PCB footprint of the DC/DC conteter (U1) is slightly larger to allow welding with the iron without the need to use the heat gun (or reflow soldering).
 
  ## WisBlock IO SDI-12 PCB
 | TOP | BOTTOM |
